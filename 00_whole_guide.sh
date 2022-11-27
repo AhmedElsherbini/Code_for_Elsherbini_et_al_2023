@@ -60,22 +60,7 @@ for file in *.fasta ; do python get_y_data.py -i $file ; done
 #cat y_data > y_data.csv
 #for x_data I observed that there is a problem in the comma sepreation.
 #so I made a small script that can sepreate them either fix this problem or make a small dataset mini_x and mini_y
-#inside this script you can modify the samples size so 
 
-import pandas as pd
-import numpy as np
-
-
-df1 = pd.read_csv("x_data.csv")
-df2 = pd.read_csv("y_data.csv")
-#this just to make sure both files has the numbersame columns
-#df3 = pd.concat([df1[[0]].str.split(', ', expand=True)], axis=1)
-#the number here 1124636 represent the whole dataset #to make a small dataset you can make 100000
-first_sample = df1.loc[np.random.choice(df1.index, 1124636, replace=False)]
-second_sample = df2.loc[first_sample.index]
-
-csv_data1 = first_sample.to_csv("all_data_x.csv")
-csv_data2 = second_sample.to_csv("all_data_y.csv")
 #end of part 3
 ###################################################################################################################################################################################
 #part 4
@@ -93,32 +78,4 @@ python3 run.py -m train -i ./data/x_data.csv
 python3 run.py -m test -i ./data/x_data.csv
 ####################################################
 #to make the confusion matrix #you have to compare the prediction results to the abosulte trurth which is (aka the metadata file of training y_data.csv )
-#################
-==8235== Memcheck, a memory error detector
-==8235== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
-==8235== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
-==8235== Command: perl genosig.pl
-==8235== 
-==8235== 
-==8235== HEAP SUMMARY:
-==8235==     in use at exit: 222,806 bytes in 890 blocks
-==8235==   total heap usage: 1,798 allocs, 908 frees, 414,961 bytes allocated
-==8235== 
-==8235== LEAK SUMMARY:
-==8235==    definitely lost: 14,235 bytes in 29 blocks
-==8235==    indirectly lost: 52,512 bytes in 20 blocks
-==8235==      possibly lost: 155,695 bytes in 840 blocks
-==8235==    still reachable: 364 bytes in 1 blocks
-==8235==                       of which reachable via heuristic:
-==8235==                         newarray           : 96 bytes in 3 blocks
-==8235==         suppressed: 0 bytes in 0 blocks
-==8235== Rerun with --leak-check=full to see details of leaked memory
-==8235== 
-==8235== For lists of detected and suppressed errors, rerun with: -s
-==8235== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
 
-######################
-real	7m33.364s
-user	5m59.671s
-sys	1m18.425s
-################################
