@@ -9,8 +9,6 @@
 
 **How did we prepare our data?**
 
-unzip
-extraction of super big fasta files may be done in HPC for very big files #you have seven classes exclude S and O
 ```python
 for file in *.tar.xz ; do tar -xvf $file ; done 
 ```
