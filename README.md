@@ -2,29 +2,109 @@
 
 ## 
 
-**This repo is for the paper of [here]()**
+**Where did we download the SARS-CoV2 sequences?**
+
+* [here](https://www.gisaid.org/)
+   
+
+**How did we prepare our data?**
+
+unzip
+extraction of super big fasta files may be done in HPC for very big files #you have seven classes exclude S and O
+```python
+for file in *.tar.xz ; do tar -xvf $file ; done 
+```
+Then count each clade sequence.
+```python
+for file in *.fasta ; do cat $file | grep ">" | wc -l >> count.txt ; done
+```
+
+open count.txt.And based on the lowest class number you subsample each class to this number 
+
+```python
+for file in *.fasta ; do seqtk sample -s185207 $file 185207  > sample_$file.fa ; done
+```
+
+This step just to make sure that the number will be as it is expected 
+
+```python
+for file in *.fa ; do cat $file | grep ">" | wc -l >> count.txt ; done
+```
+
+This step to download all sample_files and put them in the dir of genosig
+
+```python
+tar vc sample* | xz -9v > sample_data.tar.xz
+```
 
 
-**Where to find the sequences?**
+**How to produce Di and Tri nucleotide signal using GenoSig?**
+
+This step was done in a normal PC with just 24 gRAM
+
+put all fasta files in the All directory and then run the Perl script 
 
 
-* [here](https://www.ncbi.nlm.nih.gov/sra/PRJNA923578) 
+```python
+perl genosig.pl
+```
+Then
+```python
+for file in *.csv ; do sed -i -e "/nan/d" $file  ; sed -i 's/^.*.hCoV-19/hCoV-19/' $file   ; sed -i 's/.AltKarlinSignature//' $file   ; sed -i -e 's/^/>/' $file ; cut -f1 < $file > data_$file.fasta ; done
+```
+
+This command does three things 1. Remove any line with nan values out of genosig output. remove any strings before the name of the ID. remove the string named AltKarlinSignature
 
 
-**What is the order of this work?**
-
-* The sequence of this work starts by going from x --> y
-
-**xxx is mentioned in this work, where to find it?**
-
-* [here]() 
-
-**How to produce a Di+Tri signal?**
-
-## Contributing
-
-You are welcome, please open an issue (or mail me : drahmedsherbini@yahoo.com) to discuss what you would like to change.
+**How did we prepare our Metadata?**
 
 
-## License
-If this work is useful for you, kindly cite the aforementioned paper.
+This command to extract the first column to make a FAKE file with fasta extension which can be used to extract metadata (aka y data in our workflow) I mean
+make sure that the column ID starts with >xxxxxxx in both files. this command to add > in the start of the names
+
+```python
+
+for file in *.csv ; do  cut -f1 < $file > data_$file.fasta ; done
+```
+
+
+Small trick: name them all with start fake
+
+#then get the metadate ((aka y data in our workflow)) out of x files (Di+Tri signal data file) by using this stupid loop 
+#make sure you have the file named guide.csv in the same dir of the python script
+
+
+```python
+for file in *.fasta ; do python get_y_data.py -i $file ; done
+```
+
+```python
+cat *.csv > x_data.csv
+cat y_data > y_data.csv
+```
+
+
+so I made a small script that can sepreate them either fix this problem or make a small dataset mini_x and mini_y
+
+**How did we prepare our Machine Learning models?**
+
+
+```python
+python3 run.py -m PCA -i ./data/x_data.csv
+python3 run.py -m compare -i ./data/x_data.csv
+```
+Then based on this comparesion if you find that the RF is the best model is RF is the best  so we make another tool  
+In this step we wanted So here we want to make models 
+
+```python
+python3 run.py -m train -i ./data/x_data.csv
+```
+you can find them in the folder models
+here we used the whole dataset to make whole prediction results
+
+```python
+python3 run.py -m test -i ./data/x_data.csv
+```
+
+
+
