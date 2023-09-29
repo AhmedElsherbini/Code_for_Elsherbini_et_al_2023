@@ -34,7 +34,7 @@ for file in *.fa ; do cat $file | grep ">" | wc -l >> count.txt ; done
 
 **How (did we/ to) produce Di and Tri nucleotide signal using GenoSig?**
 
-Important : GenoSig is variant of [PaSiT](https://academic.oup.com/bioinformatics/article/36/8/2337/5695704) and both of them are developed by [Gleb Goussarav](https://github.com/GlebGoussarov)
+Important : GenoSig is a variant of [PaSiT](https://academic.oup.com/bioinformatics/article/36/8/2337/5695704) and both of them are developed by [Gleb Goussarav](https://github.com/GlebGoussarov)
 
 Regardless of our work, this step can be used to produce Di and Tri nucleotide signals in just two steps.
 
