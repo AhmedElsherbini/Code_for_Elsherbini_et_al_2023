@@ -2,7 +2,7 @@
 
 ## 
 
-**Where did we download the SARS-CoV2 sequences?**
+**How did we download the SARS-CoV2 sequences?**
 
 After we did register at [GISAID](https://www.gisaid.org/),...
   
