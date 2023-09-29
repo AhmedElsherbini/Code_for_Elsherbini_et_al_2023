@@ -56,7 +56,7 @@ This command does three things. Firstly, remove any line with nan values out of 
 **How did we prepare our MetaData?**
 
 
-This command extracts the first column to make a FAKE file with fasta extension which can be used to extract metadata (aka y data in our in the ML part) I mean
+This command extracts the first column to make a FAKE file with fasta extension which can be used to extract metadata (aka y data in our next section related to Machine learning) I mean
 make sure that the column ID starts with >xxxxxxx in both files. this command to add > at the start of the names
 
 ```python
@@ -69,7 +69,7 @@ Small trick: name them all with start fake
 
 Then get the MetaData ((aka y data in our workflow)) out of x files (Di+Tri signal data file) by using this loop 
 
-So, let's extract the metadat. Remember that the clade can be concluded from the name of the Fasta file and the content from the name of the country inside the guide.csv
+So, let's extract the MetaData. Remember that the clade can be concluded from the name of the Fasta file and the content from the name of the country inside the guide.csv
 Make sure you have the file named guide.csv in the same dir of the python script
 
 
