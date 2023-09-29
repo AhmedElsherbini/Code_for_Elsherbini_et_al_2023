@@ -20,6 +20,7 @@ for file in *.fasta ; do cat $file | grep ">" | wc -l >> count.txt ; done
 
 open count.txt and based on the lowest class number we subsampled each class to this number using [seqtk](https://github.com/lh3/seqtk) tool.
 
+In our case, it was the GV clade with 185,207 seq.
 ```python
 for file in *.fasta ; do seqtk sample -s185207 $file 185207  > sample_$file.fa ; done
 ```
@@ -37,7 +38,7 @@ Regardless of our work, this step can be used to produce Di and Tri nucleotide s
 
 This step was done in a normal PC with just 24 GB RAM and Intel core i5-8265U CPU @ 1.60GHz.
 
-You do not need to install anything, just put your Fasta files in the "All" directory and then run the command line
+You do not need to install anything, download the GenoSig.zip (attached) --> unzip it. Then, just put your Fasta files in the "All" directory and then run the command line
 
 
 ```python
