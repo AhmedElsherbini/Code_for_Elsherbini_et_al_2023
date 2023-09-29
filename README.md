@@ -17,7 +17,7 @@ Then count each clade sequence.
 for file in *.fasta ; do cat $file | grep ">" | wc -l >> count.txt ; done
 ```
 
-open count.txt.And based on the lowest class number you subsample each class to this number 
+open count.txt and based on the lowest class number we subsampled each class to this number 
 
 ```python
 for file in *.fasta ; do seqtk sample -s185207 $file 185207  > sample_$file.fa ; done
