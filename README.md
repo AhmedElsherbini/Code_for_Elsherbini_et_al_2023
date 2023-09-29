@@ -89,11 +89,12 @@ So, I made a small script that can separate them either fix this problem or make
 
 **How did we prepare our Machine Learning models?**
 
-Important: The ML scripts were developed initially by [Ahmed M. Elshal](https://www.linkedin.com/in/ahmed-m-elshal/?originalSubdomain=eg) 
 
 ![alt text](https://github.com/AhmedElsherbini/Code_for_Elsherbini_et_al_2023/blob/main/ML_workflow.jpg)
 
 Well, there are plenty of GUI/CLI platforms for ML training or testing, you can whatever platform you like according to your skills and preferences.
+
+Important: The ML scripts were developed initially by [Ahmed M. Elshal](https://www.linkedin.com/in/ahmed-m-elshal/?originalSubdomain=eg) 
 
 In this work, with python3 scikit-learn mainly, we compared the ML algorithms using (compare_ML_models.zip). As Random Forest (RF) turned out to be the best we made (ML_anlysis.zip) which we can train and test using RF only.
 
