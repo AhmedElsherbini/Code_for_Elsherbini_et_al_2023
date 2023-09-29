@@ -109,7 +109,7 @@ python3 run.py -m test -i ./data/x_data.csv
 
 In Excel or CSV, just we copied the ground truth and compared it to the predicted class from the previous "run.py -m test...." command.
 
-Then we used this Up there R script named **confusion_matrix.html**.
+Then we used this up there R script named **confusion_matrix.html**.
 
 **How did we make the statistics?**
 
