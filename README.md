@@ -50,7 +50,7 @@ Then
 for file in *.csv ; do sed -i -e "/nan/d" $file  ; sed -i 's/^.*.hCoV-19/hCoV-19/' $file   ; sed -i 's/.AltKarlinSignature//' $file   ; sed -i -e 's/^/>/' $file ; cut -f1 < $file > data_$file.fasta ; done
 ```
 
-This command does three things 1. Remove any line with nan values out of GenoSig output, remove any "hCoV-19/hCoV-19" before the name of the ID, and remove the string named "AltKarlinSignature".
+This command does three things. Firstly, remove any line with nan values out of GenoSig output, remove any "hCoV-19/hCoV-19" before the name of the ID, and remove the string named "AltKarlinSignature".
 
 
 **How did we prepare our MetaData?**
