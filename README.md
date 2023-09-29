@@ -8,7 +8,7 @@
   
   ![alt text](https://github.com/AhmedElsherbini/Code_for_Elsherbini_et_al_2023/blob/main/gisaid.jpg)
 
-**How did we prepare our data?**
+**How did we prepare our preprocess our input data?**
 
 ```python
 for file in *.tar.xz ; do tar -xvf $file ; done 
@@ -18,7 +18,7 @@ Then count each clade sequence.
 for file in *.fasta ; do cat $file | grep ">" | wc -l >> count.txt ; done
 ```
 
-open count.txt and based on the lowest class number we subsampled each class to this number using seqtk tool.
+open count.txt and based on the lowest class number we subsampled each class to this number using [seqtk](https://github.com/lh3/seqtk) tool.
 
 ```python
 for file in *.fasta ; do seqtk sample -s185207 $file 185207  > sample_$file.fa ; done
@@ -31,7 +31,7 @@ for file in *.fa ; do cat $file | grep ">" | wc -l >> count.txt ; done
 ```
 
 
-**How (did we/ to ) produce Di and Tri nucleotide signal using GenoSig?**
+**How (did we/ to) produce Di and Tri nucleotide signal using GenoSig?**
 
 Regardless of our work, this step can be used to produce Di and Tri nucleotide signals in just two steps.
 
