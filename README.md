@@ -38,7 +38,7 @@ Important : GenoSig is a variant of [PaSiT](https://academic.oup.com/bioinformat
 
 Regardless of this work, this step can be used to produce Di and Tri nucleotide signals in just two steps.
 
-This step was done in a normal PC with just 24 GB RAM and Intel core i5-8265U CPU @ 1.60GHz.
+This step was done in a normal PC (24 GB RAM and Intel core i5-8265U CPU @ 1.60GHz / ~7 minutes for a dataset of ~37.8 GB).
 
 You do not need to install anything, download the GenoSig.zip (attached) --> unzip it. Then, just put your Fasta files in the "All" directory and then run the command line.
 
