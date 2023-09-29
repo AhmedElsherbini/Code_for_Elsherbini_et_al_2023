@@ -25,7 +25,7 @@ In our case, it was the GV clade with 185,207 seq.
 for file in *.fasta ; do seqtk sample -s185207 $file 185207  > sample_$file.fa ; done
 ```
 
-After subsampling, make sure that the number will be as it is expected. So, let's count again
+After subsampling, make sure that the number will be as it is expected. So, let's count again.
 
 ```python
 for file in *.fa ; do cat $file | grep ">" | wc -l >> count.txt ; done
@@ -38,7 +38,7 @@ Regardless of our work, this step can be used to produce Di and Tri nucleotide s
 
 This step was done in a normal PC with just 24 GB RAM and Intel core i5-8265U CPU @ 1.60GHz.
 
-You do not need to install anything, download the GenoSig.zip (attached) --> unzip it. Then, just put your Fasta files in the "All" directory and then run the command line
+You do not need to install anything, download the GenoSig.zip (attached) --> unzip it. Then, just put your Fasta files in the "All" directory and then run the command line.
 
 
 ```python
@@ -56,7 +56,7 @@ This command does three things 1. Remove any line with nan values out of GenoSig
 **How did we prepare our MetaData?**
 
 
-This command extracts the first column to make a FAKE file with fasta extension which can be used to extract metadata (aka y data in our workflow) I mean
+This command extracts the first column to make a FAKE file with fasta extension which can be used to extract metadata (aka y data in our in the ML part) I mean
 make sure that the column ID starts with >xxxxxxx in both files. this command to add > at the start of the names
 
 ```python
@@ -67,7 +67,7 @@ for file in *.csv ; do  cut -f1 < $file > data_$file.fasta ; done
 
 Small trick: name them all with start fake
 
-Then get the MetaData ((aka y data in our workflow)) out of x files (Di+Tri signal data file) by using this stupid loop 
+Then get the MetaData ((aka y data in our workflow)) out of x files (Di+Tri signal data file) by using this loop 
 
 Make sure you have the file named guide.csv in the same dir of the python script
 
