@@ -8,7 +8,7 @@
   
   ![alt text](https://github.com/AhmedElsherbini/Code_for_Elsherbini_et_al_2023/blob/main/gisaid.jpg)
 
-**How did we prepare our preprocess our input data?**
+**How did we preprocess our input sequence data?**
 
 ```python
 for file in *.tar.xz ; do tar -xvf $file ; done 
@@ -37,7 +37,7 @@ Regardless of our work, this step can be used to produce Di and Tri nucleotide s
 
 This step was done in a normal PC with just 24 GB RAM and Intel core i5-8265U CPU @ 1.60GHz.
 
-You do not need to install anything , just put your Fasta files in the "All" directory and then run the command-line
+You do not need to install anything, just put your Fasta files in the "All" directory and then run the command line
 
 
 ```python
@@ -49,14 +49,14 @@ Then
 for file in *.csv ; do sed -i -e "/nan/d" $file  ; sed -i 's/^.*.hCoV-19/hCoV-19/' $file   ; sed -i 's/.AltKarlinSignature//' $file   ; sed -i -e 's/^/>/' $file ; cut -f1 < $file > data_$file.fasta ; done
 ```
 
-This command does three things 1. Remove any line with nan values out of genoSig output. remove any "strings" before the name of the ID. remove the string named "AltKarlinSignature".
+This command does three things 1. Remove any line with nan values out of GenoSig output, remove any "hCoV-19/hCoV-19" before the name of the ID, and remove the string named "AltKarlinSignature".
 
 
-**How did we prepare our Metadata?**
+**How did we prepare our MetaData?**
 
 
-This command to extract the first column to make a FAKE file with fasta extension which can be used to extract metadata (aka y data in our workflow) I mean
-make sure that the column ID starts with >xxxxxxx in both files. this command to add > in the start of the names
+This command extracts the first column to make a FAKE file with fasta extension which can be used to extract metadata (aka y data in our workflow) I mean
+make sure that the column ID starts with >xxxxxxx in both files. this command to add > at the start of the names
 
 ```python
 
@@ -80,7 +80,7 @@ cat y_data > y_data.csv
 ```
 
 
-so I made a small script that can sepreate them either fix this problem or make a small dataset mini_x and mini_y
+so I made a small script that can separate them either fix this problem or make a small dataset mini_x and mini_y
 
 **How did we prepare our Machine Learning models?**
 
@@ -89,7 +89,7 @@ so I made a small script that can sepreate them either fix this problem or make 
 python3 run.py -m PCA -i ./data/x_data.csv
 python3 run.py -m compare -i ./data/x_data.csv
 ```
-Then based on this comparesion if you find that the RF is the best model is RF is the best  so we make another tool  
+Then based on this comparison if you find that the RF is the best model is RF is the best  so we make another tool  
 In this step we wanted So here we want to make models 
 
 ```python
