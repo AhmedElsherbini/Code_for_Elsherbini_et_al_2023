@@ -85,7 +85,8 @@ cat y_data > y_data.csv
 So, I made a small script that can separate them either fix this problem or make a small dataset mini_x and mini_y
 
 **How did we prepare our Machine Learning models?**
-  ![alt text](https://github.com/AhmedElsherbini/Code_for_Elsherbini_et_al_2023/blob/main/ML_workflow.jpg)
+
+![alt text](https://github.com/AhmedElsherbini/Code_for_Elsherbini_et_al_2023/blob/main/ML_workflow.jpg)
 
 ```python
 python3 run.py -m PCA -i ./data/x_data.csv
