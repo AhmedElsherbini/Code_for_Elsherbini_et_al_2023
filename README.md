@@ -69,6 +69,7 @@ Small trick: name them all with start fake
 
 Then get the MetaData ((aka y data in our workflow)) out of x files (Di+Tri signal data file) by using this loop 
 
+So, let's extract the metadat. Remember that the clade can be concluded from the name of the Fasta file and the content from the name of the country inside the guide.csv
 Make sure you have the file named guide.csv in the same dir of the python script
 
 
