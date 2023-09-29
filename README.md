@@ -81,7 +81,7 @@ cat y_data > y_data.csv
 ```
 
 
-so I made a small script that can separate them either fix this problem or make a small dataset mini_x and mini_y
+So, I made a small script that can separate them either fix this problem or make a small dataset mini_x and mini_y
 
 **How did we prepare our Machine Learning models?**
 
