@@ -66,8 +66,9 @@ for file in *.csv ; do  cut -f1 < $file > data_$file.fasta ; done
 
 Small trick: name them all with start fake
 
-#then get the metadate ((aka y data in our workflow)) out of x files (Di+Tri signal data file) by using this stupid loop 
-#make sure you have the file named guide.csv in the same dir of the python script
+Then get the MetaData ((aka y data in our workflow)) out of x files (Di+Tri signal data file) by using this stupid loop 
+
+Make sure you have the file named guide.csv in the same dir of the python script
 
 
 ```python
