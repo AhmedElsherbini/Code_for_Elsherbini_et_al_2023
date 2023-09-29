@@ -4,8 +4,9 @@
 
 **Where did we download the SARS-CoV2 sequences?**
 
-* [here](https://www.gisaid.org/)
-   
+* After we did register at [GISAID](https://www.gisaid.org/).Then..
+  
+  ![alt text](https://github.com/AhmedElsherbini/Code_for_Elsherbini_et_al_2023/blob/main/gisaid.jpg)
 
 **How did we prepare our data?**
 
@@ -30,7 +31,7 @@ for file in *.fa ; do cat $file | grep ">" | wc -l >> count.txt ; done
 ```
 
 
-**How to produce Di and Tri nucleotide signal using GenoSig?**
+**How (did we/ to ) produce Di and Tri nucleotide signal using GenoSig?**
 
 Regardless of our work, this step can be used to produce Di and Tri nucleotide signals in just two steps.
 
