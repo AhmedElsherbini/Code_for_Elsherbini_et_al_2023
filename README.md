@@ -105,7 +105,7 @@ here we used the whole dataset to make whole prediction results
 ```python
 python3 run.py -m test -i ./data/x_data.csv
 ```
-**How did we make the confusion matrix?**
+**How did we make the confusion matrix and Chord diagram?**
 
 In Excel or csv, just we copied the ground truth and compared it to the predicted class from the previous "run.py -m test...." command.
 
