@@ -17,41 +17,38 @@ Then count each clade sequence.
 for file in *.fasta ; do cat $file | grep ">" | wc -l >> count.txt ; done
 ```
 
-open count.txt and based on the lowest class number we subsampled each class to this number 
+open count.txt and based on the lowest class number we subsampled each class to this number using seqtk tool.
 
 ```python
 for file in *.fasta ; do seqtk sample -s185207 $file 185207  > sample_$file.fa ; done
 ```
 
-This step just to make sure that the number will be as it is expected 
+After subsampling, make sure that the number will be as it is expected. So, let's count again
 
 ```python
 for file in *.fa ; do cat $file | grep ">" | wc -l >> count.txt ; done
 ```
 
-This step to download all sample_files and put them in the dir of genosig
-
-```python
-tar vc sample* | xz -9v > sample_data.tar.xz
-```
-
 
 **How to produce Di and Tri nucleotide signal using GenoSig?**
 
-This step was done in a normal PC with just 24 gRAM
+Regardless of our work, this step can be used to produce Di and Tri nucleotide signals in just two steps.
 
-put all fasta files in the All directory and then run the Perl script 
+This step was done in a normal PC with just 24 GB RAM and Intel core i5-8265U CPU @ 1.60GHz.
+
+You do not need to install anything , just put your Fasta files in the "All" directory and then run the command-line
 
 
 ```python
 perl genosig.pl
 ```
 Then
+
 ```python
 for file in *.csv ; do sed -i -e "/nan/d" $file  ; sed -i 's/^.*.hCoV-19/hCoV-19/' $file   ; sed -i 's/.AltKarlinSignature//' $file   ; sed -i -e 's/^/>/' $file ; cut -f1 < $file > data_$file.fasta ; done
 ```
 
-This command does three things 1. Remove any line with nan values out of genosig output. remove any strings before the name of the ID. remove the string named AltKarlinSignature
+This command does three things 1. Remove any line with nan values out of genoSig output. remove any "strings" before the name of the ID. remove the string named "AltKarlinSignature".
 
 
 **How did we prepare our Metadata?**
