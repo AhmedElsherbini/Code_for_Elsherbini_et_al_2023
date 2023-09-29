@@ -105,6 +105,13 @@ here we used the whole dataset to make whole prediction results
 ```python
 python3 run.py -m test -i ./data/x_data.csv
 ```
+**How did we make the confusion matrix?**
 
+In Excel or csv, just we copied the ground truth and compared it to the predicted class from the previous "run.py -m test...." command.
 
+Then we used this Up there R script named **confusion_matrix.html**.
+
+**How did we make the statistics?**
+
+Up there, the file **Stat.html**.
 
