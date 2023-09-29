@@ -4,7 +4,7 @@
 
 **Where did we download the SARS-CoV2 sequences?**
 
-* After we did register at [GISAID](https://www.gisaid.org/).Then..
+After we did register at [GISAID](https://www.gisaid.org/).Then..
   
   ![alt text](https://github.com/AhmedElsherbini/Code_for_Elsherbini_et_al_2023/blob/main/gisaid.jpg)
 
