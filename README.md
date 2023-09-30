@@ -29,6 +29,7 @@ We need to normalize our data. Then,..
 Open count.txt and based on the smallest clade, we subsampled each clade using [seqtk](https://github.com/lh3/seqtk) tool.
 
 In our case, it was the GV clade with 185,207 seq.
+
 ```python
 for file in *.fasta ; do seqtk sample -s185207 $file 185207  > sample_$file.fa ; done
 ```
