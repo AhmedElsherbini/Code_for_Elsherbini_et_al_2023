@@ -119,8 +119,10 @@ In this step we wanted So here we want to make models
 ```python
 python3 run.py -m train -i ./data/x_data.csv
 ```
-you can find them in the folder models
-here we used the whole dataset to make whole prediction results
+You can find them in the folder models.
+
+here we used the whole dataset to make whole prediction results.
+
 
 ```python
 python3 run.py -m test -i ./data/x_data.csv
