@@ -100,7 +100,7 @@ Well, there are plenty of GUI/CLI platforms for ML training or testing, you can 
 
 Important: the ML scripts were developed initially by [Ahmed M. Elshal](https://github.com/Ahmed-M-Elshal). 
 
-In this work, with python3 scikit-learn mainly, we compared the ML algorithms using (compare_ML_models.zip). As Random Forest (RF) turned out to be the best we made (ML_anlysis.zip) which we can train and test using RF only.
+In this work, with python3 scikit-learn mainly, we compared the ML algorithms using (compare_ML_models.zip). As Random Forest (RF) turned out to be the best model, we made (ML_anlysis.zip) which we can train and test using RF only.
 
 
 ```python
