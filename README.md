@@ -93,7 +93,7 @@ for file in *.fasta ; do python get_y_data.py -i $file ; done
 cat *.csv > x_data.csv
 cat y_data > y_data.csv
 ```
-Always remember that X is the Di and Tri frequency signal and Y is the MetaData
+Always remember that X file is the Di and Tri frequency signal and Y file is the MetaData
 
 So, I made a small script that can separate them either fix this problem or make a small dataset mini_x and mini_y
 
