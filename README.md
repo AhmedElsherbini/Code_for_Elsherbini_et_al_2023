@@ -11,16 +11,17 @@ After we did register at [GISAID](https://www.gisaid.org/),...
 Clear. right?
 
 **How did we preprocess our input sequence data?**
-
+Firstly, we needed to unzip our data 
 ```python
 for file in *.tar.xz ; do tar -xvf $file ; done 
 ```
-Then count each clade sequence.
+Then, let's count each clade sequence.
+
 ```python
 for file in *.fasta ; do cat $file | grep ">" | wc -l >> count.txt ; done
 ```
-
-open count.txt and based on the lowest class number we subsampled each class to this number using [seqtk](https://github.com/lh3/seqtk) tool.
+We need to normalize our data. Then,..
+Open count.txt and based on the smallest clade, we subsampled each clade using [seqtk](https://github.com/lh3/seqtk) tool.
 
 In our case, it was the GV clade with 185,207 seq.
 ```python
