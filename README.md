@@ -43,11 +43,11 @@ for file in *.fa ; do cat $file | grep ">" | wc -l >> count.txt ; done
 
 **How (did we/ to) produce Di and Tri nucleotide signal using GenoSig?**
 
-Important: GenoSig is a variant of [PaSiT](https://academic.oup.com/bioinformatics/article/36/8/2337/5695704) and both of them are developed by [Gleb Goussarav](https://github.com/GlebGoussarov).
-
 Regardless of this work, this step can be used to produce Di and Tri nucleotide signals in just two steps.
 
- Just in a normal PC (24 GB RAM and Intel core i5-8265U CPU @ 1.60GHz), it took ~7 minutes (wall-clock time) for a dataset of ~37.8 GB).
+Important: GenoSig is a variant of [PaSiT](https://academic.oup.com/bioinformatics/article/36/8/2337/5695704) and both of them are developed by [Gleb Goussarav](https://github.com/GlebGoussarov).
+
+Just in a normal PC (24 GB RAM and Intel core i5-8265U CPU @ 1.60GHz), it took ~7 minutes (wall-clock time) for a dataset of ~37.8 GB).
 
 You do not need to install anything, download the GenoSig.zip (attached) --> unzip it. Then, just put your Fasta files in the "All" directory and then run the command line.
 
