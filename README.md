@@ -37,7 +37,7 @@ for file in *.fa ; do cat $file | grep ">" | wc -l >> count.txt ; done
 
 **How (did we/ to) produce Di and Tri nucleotide signal using GenoSig?**
 
-Important : GenoSig is a variant of [PaSiT](https://academic.oup.com/bioinformatics/article/36/8/2337/5695704) and both of them are developed by [Gleb Goussarav](https://github.com/GlebGoussarov)
+Important: GenoSig is a variant of [PaSiT](https://academic.oup.com/bioinformatics/article/36/8/2337/5695704) and both of them are developed by [Gleb Goussarav](https://github.com/GlebGoussarov).
 
 Regardless of this work, this step can be used to produce Di and Tri nucleotide signals in just two steps.
 
@@ -60,9 +60,9 @@ This command does three things. Firstly, remove any line with nan values out of 
 
 **How did we prepare our MetaData?**
 
-Back again to SARS-CoV2 project...
+Back again to the SARS-CoV2 project...
 
-This command extracts the first column to make a FAKE file with fasta extension which can be used to extract metadata (aka y data in our next section related to Machine learning) I mean
+This command extracts the first column to make a FAKE file with Fasta extension which can be used to extract metadata (aka y data in our next section related to Machine learning) I mean
 make sure that the column ID starts with >xxxxxxx in both files. this command to add > at the start of the names
 
 ```python
@@ -98,7 +98,7 @@ So, I made a small script that can separate them either fix this problem or make
 
 Well, there are plenty of GUI/CLI platforms for ML training or testing, you can use whatever platform you like according to your skills and preferences.
 
-Important: the ML scripts were developed initially by [Ahmed M. Elshal](https://github.com/Ahmed-M-Elshal) 
+Important: the ML scripts were developed initially by [Ahmed M. Elshal](https://github.com/Ahmed-M-Elshal). 
 
 In this work, with python3 scikit-learn mainly, we compared the ML algorithms using (compare_ML_models.zip). As Random Forest (RF) turned out to be the best we made (ML_anlysis.zip) which we can train and test using RF only.
 
