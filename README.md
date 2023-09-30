@@ -17,11 +17,13 @@ Firstly, we needed to unzip our data.
 ```python
 for file in *.tar.xz ; do tar -xvf $file ; done 
 ```
-We have 7 files and each file represents one clade, let's count each clade.
+We have 9 files and each file represents one clade, let's count each clade.
 
 ```python
 for file in *.fasta ; do cat $file | grep ">" | wc -l >> count.txt ; done
 ```
+We decided to exclude (S and O ), as the first had very few sequences relative to the smallest clade (< 10 %) and the second represented unclassified isolates. 
+
 We need to normalize our data. Then,..
 
 Open count.txt and based on the smallest clade, we subsampled each clade using [seqtk](https://github.com/lh3/seqtk) tool.
