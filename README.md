@@ -11,7 +11,9 @@ After we did register at [GISAID](https://www.gisaid.org/),...
 Clear. right?
 
 **How did we preprocess our input sequence data?**
-Firstly, we needed to unzip our data 
+
+Firstly, we needed to unzip our data.
+
 ```python
 for file in *.tar.xz ; do tar -xvf $file ; done 
 ```
