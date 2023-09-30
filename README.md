@@ -49,7 +49,7 @@ You do not need to install anything, download the GenoSig.zip (attached) --> unz
 ```python
 perl genosig.pl
 ```
-Then
+Then,..
 
 ```python
 for file in *.csv ; do sed -i -e "/nan/d" $file  ; sed -i 's/^.*.hCoV-19/hCoV-19/' $file   ; sed -i 's/.AltKarlinSignature//' $file   ; sed -i -e 's/^/>/' $file ; cut -f1 < $file > data_$file.fasta ; done
@@ -60,6 +60,7 @@ This command does three things. Firstly, remove any line with nan values out of 
 
 **How did we prepare our MetaData?**
 
+Back again to SARS-CoV2 project...
 
 This command extracts the first column to make a FAKE file with fasta extension which can be used to extract metadata (aka y data in our next section related to Machine learning) I mean
 make sure that the column ID starts with >xxxxxxx in both files. this command to add > at the start of the names
@@ -95,7 +96,7 @@ So, I made a small script that can separate them either fix this problem or make
 
 ![alt text](https://github.com/AhmedElsherbini/Code_for_Elsherbini_et_al_2023/blob/main/ML_workflow.jpg)
 
-Well, there are plenty of GUI/CLI platforms for ML training or testing, you can whatever platform you like according to your skills and preferences.
+Well, there are plenty of GUI/CLI platforms for ML training or testing, you can use whatever platform you like according to your skills and preferences.
 
 Important: the ML scripts were developed initially by [Ahmed M. Elshal](https://github.com/Ahmed-M-Elshal) 
 
