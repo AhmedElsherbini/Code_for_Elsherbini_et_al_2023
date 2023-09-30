@@ -17,7 +17,7 @@ Firstly, we needed to unzip our data.
 ```python
 for file in *.tar.xz ; do tar -xvf $file ; done 
 ```
-Then, let's count each clade sequence.
+We have 7 files and each file represents one clade, let's count each clade.
 
 ```python
 for file in *.fasta ; do cat $file | grep ">" | wc -l >> count.txt ; done
