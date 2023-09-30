@@ -137,3 +137,11 @@ Then we used this up there R script named **confusion_matrix.html**.
 
 Up there, the R script named **Stat.html**.
 
+
+## Contributing
+Pull requests are very welcome. 
+
+For major changes, please open an issue (or Email me) first to discuss what you would like to change.
+
+Contact me directly by email : drahmedsherbini@yahoo.com
+
