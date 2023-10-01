@@ -113,14 +113,13 @@ In this work, with python3 scikit-learn mainly, we compared the ML algorithms us
 python3 run.py -m PCA -i ./data/x_data.csv
 python3 run.py -m compare -i ./data/x_data.csv
 ```
-RF is the best, let's make models.
+RF was the best, then we  made models.
 
 ```python
 python3 run.py -m train -i ./data/x_data.csv
 ```
-You can find them in the folder models.
 
-Let's test the whole dataset to use afterward for the confusion matrix and draw some Chord graphs.
+Test the whole dataset to use it afterward for the confusion matrix and draw some Chord graphs.
 
 ```python
 python3 run.py -m test -i ./data/x_data.csv
