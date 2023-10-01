@@ -113,20 +113,19 @@ In this work, with python3 scikit-learn mainly, we compared the ML algorithms us
 python3 run.py -m PCA -i ./data/x_data.csv
 python3 run.py -m compare -i ./data/x_data.csv
 ```
-Then based on this comparison if you find that the RF is the best model is RF is the best  so we make another tool  
-In this step we wanted So here we want to make models 
+RF is the best, let's make models.
 
 ```python
 python3 run.py -m train -i ./data/x_data.csv
 ```
 You can find them in the folder models.
 
-here we used the whole dataset to make whole prediction results.
-
+Let's test the whole dataset to use afterward for the confusion matrix and draw some Chord graphs.
 
 ```python
 python3 run.py -m test -i ./data/x_data.csv
 ```
+
 **How did we make the confusion matrix and Chord diagram?**
 
 In Excel or CSV, just we copied the ground truth and compared it to the predicted class from the previous "run.py -m test...." command.
