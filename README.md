@@ -66,6 +66,8 @@ This command does three things. Firstly, remove any line with nan values out of 
 
 **How did we prepare our MetaData?**
 
+This is a crucial step. Well, the MetaData in our work is two information clade and the continent. The clade was concluded from the name of the Fasta file, while the continent needed a lot work.
+
 Back again to the SARS-CoV2 project...
 
 This command extracts the first column to make a FAKE file with Fasta extension which can be used to extract metadata (aka y data in our next section related to Machine learning) I mean
