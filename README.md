@@ -70,6 +70,10 @@ Back again to the SARS-CoV2 project...
 
 This is a crucial step. Well, the MetaData in our work is two information the clade and the continent. The clade was concluded from the name of the Fasta file, while the continent needed a lot work.
 
+How did we get the continent? From the header of the fasta file (>SARS-COV-3356667-EGYPT-....) you can find the country. right? So, using a Python script we looped over each header in all of the files and based on a country-continent association (aka guide.csv) file, we were able to conclude for each sequence which continent it belong.
+
+These steps explain in detail this process.
+
 This command extracts the first column to make a FAKE file with Fasta extension which can be used to extract metadata (aka y data in our next section related to Machine learning) I mean
 make sure that the column ID starts with >xxxxxxx in both files. this command to add > at the start of the names
 
