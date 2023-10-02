@@ -75,6 +75,7 @@ How did we get the continent? From the header of the fasta file (>SARS-COV-33566
 These steps explain in detail this process.
 
 Step.1:
+
 This command extracts the first column to make a FAKE file with Fasta extension which can be used to extract metadata (aka y data in our next section related to Machine learning) I mean
 make sure that the column ID starts with >xxxxxxx in both files. this command to add > at the start of the names
 
@@ -89,6 +90,7 @@ Small trick: name them all with start fake
 Then get the MetaData ((aka y data in our workflow)) out of x files (Di+Tri signal data file) by using this loop 
 
 Step.2:
+
 So, let's extract the MetaData. 
 Make sure you have the file named guide.csv in the same dir of the python script
 
@@ -96,6 +98,10 @@ Make sure you have the file named guide.csv in the same dir of the python script
 ```python
 for file in *.fasta ; do python get_y_data.py -i $file ; done
 ```
+
+Step.3:
+
+Let's merge.
 
 ```python
 cat *.csv > x_data.csv
