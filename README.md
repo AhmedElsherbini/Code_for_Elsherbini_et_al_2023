@@ -22,7 +22,7 @@ We have 9 files and each file represents one clade, let's count each clade.
 ```python
 for file in *.fasta ; do cat $file | grep ">" | wc -l >> count.txt ; done
 ```
-We decided to exclude (S and O ), as the first had very few sequences in relative to the smallest clade (< 10 % to GV clade) and the second represented unclassified isolates. 
+We decided to exclude (S and O ), as the first had very few sequences in relative to the smallest clade (< 10 % to GV clade) and the second represented unclassified/noisy isolates. 
 
 We need to normalize our data. Then,..
 
