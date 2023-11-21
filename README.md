@@ -65,6 +65,7 @@ This command does three things. Firstly, remove any line with nan values out of 
 
 But, it does also produce a FASTA file with just headers, why?
 
+This is step 1. in the next phase.
 
 **How did we prepare our MetaData?**
 
