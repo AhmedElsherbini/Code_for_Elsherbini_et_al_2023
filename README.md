@@ -63,6 +63,8 @@ for file in *.csv ; do sed -i -e "/nan/d" $file  ; sed -i 's/^.*.hCoV-19/hCoV-19
 
 This command does three things. Firstly, remove any line with nan values out of GenoSig output, remove any "hCoV-19/hCoV-19" before the name of the ID, and remove the string named "AltKarlinSignature".
 
+But, it does also produce a FASTA file with just headers, why?
+
 
 **How did we prepare our MetaData?**
 
