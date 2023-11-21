@@ -97,6 +97,7 @@ Step.2:
 So, let's extract the MetaData. 
 Make sure you have the file named guide.csv in the same dir of the python script
 
+Important: Make sure that the name of the file is the clade.
 
 ```python
 for file in *.fasta ; do python get_y_data.py -i $file ; done
