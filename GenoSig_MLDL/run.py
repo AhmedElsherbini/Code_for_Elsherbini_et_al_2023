@@ -6,6 +6,10 @@ from train import *
 from test import *
 
 #####################
+# creating folders 
+
+os.system("mkdir result models")
+
 # Create the parser
 my_parser = argparse.ArgumentParser(description='Welcome to our tool, make sure your files exsit in the data folder!')
 print("$ python run.py -m train -i ./data/x_data.csv")
