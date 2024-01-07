@@ -1,23 +1,7 @@
 # Code_for_Elsherbini_et_al.,_2023
 
 ## 
-## Installation using conda 
 
-To get started with our project, follow these steps :
-
-**1- clone the repository:**
-```bash
-git clone https://github.com/AhmedElsherbini/Code_for_Elsherbini_et_al_2023.git
-cd ML_anlysis
-```
-**2- create the conda enviroment with the dependencies**
-```bash
-conda env create -f enviroment.yml
-```
-**3- Activate the conda enviroment**
-```bash
-conda activate GenoSig_MLDL
-```
 
 **How did we download the SARS-CoV2 sequences?**
 
@@ -31,12 +15,12 @@ Clear. right?
 
 Firstly, we needed to unzip our data.
 
-```python
+```bash
 for file in *.tar.xz ; do tar -xvf $file ; done 
 ```
 We have 9 files and each file represents one clade, let's count each clade.
 
-```python
+```bash
 for file in *.fasta ; do cat $file | grep ">" | wc -l >> count.txt ; done
 ```
 We decided to exclude (S and O), as the first had very few sequences in relative to the smallest clade (< 10 % to GV clade) and the second represented unclassified/noisy isolates. Also, no sequence data for very early clades like (L and V)
@@ -47,13 +31,13 @@ Open count.txt and based on the smallest clade, we subsampled each clade using [
 
 In our case, it was the GV clade with 185,207 seq.
 
-```python
+```bash
 for file in *.fasta ; do seqtk sample -s185207 $file 185207  > sample_$file.fa ; done
 ```
 
 After subsampling, make sure that the number will be as it is expected. So, let's count again.
 
-```python
+```bash
 for file in *.fa ; do cat $file | grep ">" | wc -l >> count.txt ; done
 ```
 
@@ -69,12 +53,12 @@ Just in a normal PC (24 GB RAM and Intel core i5-8265U CPU @ 1.60GHz), it took ~
 You do not need to install anything, download the GenoSig.zip (attached) --> unzip it. Then, just put your Fasta files in the "All" directory and then run the command line.
 
 
-```python
+```bash
 perl genosig.pl
 ```
 Then,..
 
-```python
+```bash
 for file in *.csv ; do sed -i -e "/nan/d" $file  ; sed -i 's/^.*.hCoV-19/hCoV-19/' $file   ; sed -i 's/.AltKarlinSignature//' $file   ; sed -i -e 's/^/>/' $file ; cut -f1 < $file > data_$file.fasta ; done
 ```
 
@@ -99,7 +83,7 @@ Step.1:
 This command extracts the first column to make a FAKE file with Fasta extension which can be used to extract metadata (aka y data in our next section related to Machine learning) I mean
 make sure that the column ID starts with >xxxxxxx in both files. this command to add > at the start of the names
 
-```python
+```bash
 
 for file in *.csv ; do  cut -f1 < $file > data_$file.fasta ; done
 ```
@@ -124,7 +108,7 @@ Step.3:
 
 Let's merge.
 
-```python
+```bash
 cat *.csv > x_data.csv
 cat y_data > y_data.csv
 ```
@@ -143,20 +127,39 @@ Important: the ML scripts in our work were developed initially by [Ahmed M. Elsh
 
 In this work, with python3 scikit-learn mainly, we compared the ML algorithms using (compare_ML_models.zip). As Random Forest (RF) turned out to be the best model, we made (ML_anlysis.zip) which we can train and test using RF only.
 
+## Installation using conda 
 
-```python
-python3 run.py -m PCA -i ./data/x_data.csv
-python3 run.py -m compare -i ./data/x_data.csv
+To get started with our project, follow these steps :
+
+**Clone the repository:**
+```bash
+git clone https://github.com/AhmedElsherbini/Code_for_Elsherbini_et_al_2023.git
+cd ML_anlysis
 ```
-RF was the best, then we  made models.
+**Create the conda enviroment with the dependencies**
 
-```python
+```bash
+conda env create -f enviroment.yml
+```
+**Activate the conda enviroment**
+```bash
+conda activate GenoSig_MLDL
+```
+
+```bash
+python3 run.py -m PCA -i ./data/x_data.csv
+```
+DL and RF was the best, then we  made models.
+
+Take care: RF with 100 estimators is quite slow more than DL especially with cross validation. 
+
+```bash
 python3 run.py -m train -i ./data/x_data.csv
 ```
 
 Test the whole dataset to use it afterward for the confusion matrix and draw some Chord graphs.
 
-```python
+```bash
 python3 run.py -m test -i ./data/x_data.csv
 ```
 
