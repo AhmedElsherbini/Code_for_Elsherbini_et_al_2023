@@ -1,6 +1,8 @@
 # Code_for_Elsherbini_et_al.,_2023
 
 ## 
+## Instulation using conda 
+
 
 **How did we download the SARS-CoV2 sequences?**
 
