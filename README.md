@@ -1,8 +1,24 @@
 # Code_for_Elsherbini_et_al.,_2023
 
 ## 
-## Instulation using conda 
+## Installation using conda 
 
+To get started with our project, follow these steps :
+
+**1- clone the repository:**
+```bash
+git clone https://github.com/AhmedElsherbini/Code_for_Elsherbini_et_al_2023.git
+unzip ML_analysis.zip
+cd ML_anlysis
+```
+**2- create the conda enviroment with the dependencies**
+```bash
+conda env create -f enviroment.yml
+```
+**3- Activate the conda enviroment**
+```bash
+conda activate GenoSig_MLDL
+```
 
 **How did we download the SARS-CoV2 sequences?**
 
