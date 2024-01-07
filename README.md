@@ -112,7 +112,7 @@ Let's merge.
 cat *.csv > x_data.csv
 cat y_data > y_data.csv
 ```
-Always remember that X file is the Di and Tri frequency signal and Y file is the MetaData
+Always remember that the X file is the Di and Tri frequency signal and the Y file is the MetaData
 
 So, I made a small script that can separate them either fix this problem or make a small dataset mini_x and mini_y
 
@@ -130,17 +130,19 @@ In this work, with python3 scikit-learn mainly, we compared the ML algorithms us
 
 To get started with our ML work, follow these steps :
 
-**Clone the repository:**
+Clone the repository
+
 ```bash
 git clone https://github.com/AhmedElsherbini/Code_for_Elsherbini_et_al_2023.git
 cd ML_anlysis
 ```
-**Create the conda environment with the dependencies**
+Create the conda environment with the dependencies
 
 ```bash
 conda env create -f enviroment.yml
 ```
-**Activate the conda environment**
+Activate the conda environment
+
 ```bash
 conda activate GenoSig_MLDL
 ```
@@ -178,5 +180,5 @@ Pull requests are very welcome.
 
 For major changes, please open an issue (or Email me) first to discuss what you would like to change.
 
-Contact me directly by email : drahmedsherbini@yahoo.com
+Contact me directly by email: drahmedsherbini@yahoo.com
 
