@@ -127,21 +127,20 @@ Important: the ML scripts in our work were developed initially by [Ahmed M. Elsh
 
 In this work, with python3 scikit-learn mainly, we compared the ML algorithms using (compare_ML_models.zip). As Random Forest (RF) turned out to be the best model, we made (ML_anlysis.zip) which we can train and test using RF only.
 
-## Installation using conda 
 
-To get started with our project, follow these steps :
+To get started with our ML work, follow these steps :
 
 **Clone the repository:**
 ```bash
 git clone https://github.com/AhmedElsherbini/Code_for_Elsherbini_et_al_2023.git
 cd ML_anlysis
 ```
-**Create the conda enviroment with the dependencies**
+**Create the conda environment with the dependencies**
 
 ```bash
 conda env create -f enviroment.yml
 ```
-**Activate the conda enviroment**
+**Activate the conda environment**
 ```bash
 conda activate GenoSig_MLDL
 ```
@@ -149,9 +148,9 @@ conda activate GenoSig_MLDL
 ```bash
 python3 run.py -m PCA -i ./data/x_data.csv
 ```
-DL and RF was the best, then we  made models.
+DL and RF were the best, therefore we used them for models.
 
-Take care: RF with 100 estimators is quite slow more than DL especially with cross validation. 
+Take care: RF with 100 estimators is quite slow more than DL, especially with cross-validation. 
 
 ```bash
 python3 run.py -m train -i ./data/x_data.csv
@@ -171,7 +170,7 @@ Then we used this up there R script named **confusion_matrix.html**.
 
 **How did we make the statistics?**
 
-Up there, the R script named **Stat.html**.
+Up there, the R script is named **Stat.html**.
 
 
 ## Contributing
