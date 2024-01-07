@@ -8,7 +8,6 @@ To get started with our project, follow these steps :
 **1- clone the repository:**
 ```bash
 git clone https://github.com/AhmedElsherbini/Code_for_Elsherbini_et_al_2023.git
-unzip ML_analysis.zip
 cd ML_anlysis
 ```
 **2- create the conda enviroment with the dependencies**
