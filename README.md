@@ -16,8 +16,7 @@ What about the validation dataset (n = 67,399) from 4-Nov-2022 to 30-11-2023?
 Here is an example of how we downloaded Clade G.
 ![alt text](https://github.com/AhmedElsherbini/Code_for_Elsherbini_et_al_2023/blob/main/Slide16.jpg)
 
-**How did we preprocess our input sequence data?**
-
+**How did we preprocess our input sequence data for the main dataset?**
 Firstly, we needed to unzip our data.
 
 ```bash
