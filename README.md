@@ -134,6 +134,7 @@ Clone the repository
 
 ```bash
 git clone https://github.com/AhmedElsherbini/Code_for_Elsherbini_et_al_2023.git
+cd Code_for_Elsherbini_et_al_2023
 cd ML_anlysis
 ```
 Create the conda environment with the dependencies
