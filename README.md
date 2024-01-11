@@ -5,11 +5,16 @@
 
 **How did we download the SARS-CoV2 sequences?**
 
+Firstly for the main dataset until 3-Nov-22 (n= 1131185)
 After we did register at [GISAID](https://www.gisaid.org/),...
   
   ![alt text](https://github.com/AhmedElsherbini/Code_for_Elsherbini_et_al_2023/blob/main/gisaid.jpg)
 
 Clear. right?
+What about the validation dataset (n = 67,399) from 4-Nov-2022 to 30-11-2023?
+
+Here is an example of how we downloaded Clade G for example.
+![alt text](https://github.com/AhmedElsherbini/Code_for_Elsherbini_et_al_2023/blob/main/Slide16.jpg)
 
 **How did we preprocess our input sequence data?**
 
