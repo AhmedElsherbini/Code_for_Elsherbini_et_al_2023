@@ -161,6 +161,7 @@ Check the table below:
 | -m  |  The tool mood. We have different modes listed in (PCA , ML_train , ML_test , DL_train or DL_test) |
 | -s  |  Number of splits which required to the cross validation|(10 is the most used)
 
+**Examples:**
 
 ```python
 python3 run.py -m PCA -i ./data/x_data.csv -y ./data/y_data.csv
