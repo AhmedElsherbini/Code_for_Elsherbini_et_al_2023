@@ -20,10 +20,10 @@ from sklearn.preprocessing import LabelEncoder
 
 #loading the training dataset
 ####################
-def load_train_data(f_name):
+def load_train_data(f_name,y_name):
     X = pd.read_csv(f_name)
     
-    y = pd.read_csv(f_name.replace('x','y'))
+    y = pd.read_csv(y_name)
     data = pd.merge(X, y, on='ID')
     data = shuffle(data)
     
@@ -166,5 +166,5 @@ def train_test_cross_val(X, y, n_splits=5):
         val_performances.append(val_performance)
         c_reports.append(c_report)
         cms.append(cm)
-    pickle.dump(model, open('./models/cont_dl_model.sav', 'wb'))
+    #pickle.dump(model, open('./models/cont_dl_model.sav', 'wb'))
     return train_performances, val_performances, c_reports, cms , model
