@@ -5,7 +5,7 @@
 
 **How did we download the SARS-CoV2 sequences?**
 
-Firstly for the main dataset until 3-Nov-2022 (n= 1131185)
+Firstly for the main dataset until 3-Nov-2022 (n= 1,131,185)
 After we did register at [GISAID](https://www.gisaid.org/),...
   
   ![alt text](https://github.com/AhmedElsherbini/Code_for_Elsherbini_et_al_2023/blob/main/gisaid.jpg)
