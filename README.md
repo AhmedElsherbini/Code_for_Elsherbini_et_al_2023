@@ -124,7 +124,7 @@ So, I made a small script that can separate them either fix this problem or make
 **How did we prepare our Machine Learning models?**
 
 
-![alt text](https://github.com/AhmedElsherbini/Code_for_Elsherbini_et_al_2023/blob/main/ML_workflow.jpg)
+![alt text](https://github.com/AhmedElsherbini/Code_for_Elsherbini_et_al_2023/blob/main/Slide8.jpg)
 
 Well, there are plenty of GUI/CLI platforms for ML training or testing, you can use whatever platform you like according to your skills and preferences.
 
