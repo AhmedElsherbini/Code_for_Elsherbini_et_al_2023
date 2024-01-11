@@ -174,7 +174,7 @@ Take care: RF with 100 estimators is quite slow more than DL, especially with cr
 python3 run.py -m DL_train -x ./data/x_data.csv -y ./data/y_data.csv -s 10
 ```
 
-For example here to test the whole dataset, to use it afterward for the confusion matrix and draw some Chord graphs.
+Here to test the whole dataset against the computed model, use it afterwards for the confusion matrix, and draw some Chord graphs.
 
 ```python
 python3 run.py -m DL_test -x ./data/x_data.csv -y ./data/y_data.csv
