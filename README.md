@@ -165,6 +165,18 @@ Test the whole dataset to use it afterward for the confusion matrix and draw som
 python3 run.py -m test -i ./data/x_data.csv
 ```
 
+ # Arguments
+
+Check the table below:
+- Note: Arguments are case sensitive, only write in CAPSLOCK mode.
+
+| Argument  |  Function |
+|---|---|
+| -x | the data input to the model including the features|
+|  -y |  The target that the model will predict|
+| -m  |  The tool mood. we have different modes listed in (PCA , ML_train , ML_test , DL_train or DL_test) |
+| -s  |  Number of splits which required to the cross validation|
+
 **How did we make the confusion matrix and Chord diagram?**
 
 In Excel or CSV, just we copied the ground truth and compared it to the predicted class from the previous "run.py -m test...." command.
