@@ -148,24 +148,8 @@ Activate the conda environment
 conda activate GenoSig_MLDL
 ```
 
-```bash
-python3 run.py -m PCA -i ./data/x_data.csv
-```
-DL and RF were the best, therefore we used them for models.
 
-Take care: RF with 100 estimators is quite slow more than DL, especially with cross-validation. 
 
-```bash
-python3 run.py -m train -i ./data/x_data.csv
-```
-
-Test the whole dataset to use it afterward for the confusion matrix and draw some Chord graphs.
-
-```bash
-python3 run.py -m test -i ./data/x_data.csv
-```
-
- # Arguments
 
 Check the table below:
 - Note: Arguments are case sensitive, only write in CAPSLOCK mode.
@@ -173,9 +157,27 @@ Check the table below:
 | Argument  |  Function |
 |---|---|
 | -x | the data input to the model including the features|
-|  -y |  The target that the model will predict|
-| -m  |  The tool mood. we have different modes listed in (PCA , ML_train , ML_test , DL_train or DL_test) |
-| -s  |  Number of splits which required to the cross validation|
+|  -y |  The label/target/class that the model will predict|
+| -m  |  The tool mood. We have different modes listed in (PCA , ML_train , ML_test , DL_train or DL_test) |
+| -s  |  Number of splits which required to the cross validation|(10 is the most used)
+
+
+```python
+python3 run.py -m PCA -i ./data/x_data.csv -y ./data/y_data.csv
+```
+DL and RF were the best, therefore we used them for models.
+
+Take care: RF with 100 estimators is quite slow more than DL, especially with cross-validation. 
+
+```python
+python3 run.py -m DL_train -x ./data/x_data.csv -y ./data/y_data.csv
+```
+
+For example here to test the whole dataset, to use it afterward for the confusion matrix and draw some Chord graphs.
+
+```python
+python3 run.py -m DL_test -x ./data/x_data.csv -y ./data/y_data.csv
+```
 
 **How did we make the confusion matrix and Chord diagram?**
 
