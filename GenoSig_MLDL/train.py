@@ -11,8 +11,8 @@ import warnings
 from sklearn.model_selection import cross_val_score
 #!conda install -c conda-forge xgboost
 
-def trainML_model(f_name):
-    data, X, y1, y2, y3, t1, t2, t3 = load_train_data(f_name)
+def trainML_model(f_name,y_name):
+    data, X, y1, y2, y3, t1, t2, t3 = load_train_data(f_name,y_name)
     Features = np.asarray(X, dtype= float)
     Labels1 = np.asarray(y1)
     Labels2 = np.asarray(y2)
@@ -53,8 +53,8 @@ def trainML_model(f_name):
     #########################################################################
 
 
-def trainDL_model(f_name):
-    data, X, y1, y2, y3, t1, t2, t3 = load_train_data(f_name)
+def trainDL_model(f_name,y_name,n_splits):
+    data, X, y1, y2, y3, t1, t2, t3 = load_train_data(f_name,y_name)
     Features = np.asarray(X, dtype= float)
     Labels1 = np.asarray(y1)
     Labels2 = np.asarray(y2)
@@ -68,7 +68,7 @@ def trainDL_model(f_name):
 
     ##############################################################
 
-    dl_train_performance, dl_val_performance, dl_report, dl_cm , model = train_test_cross_val(X, y1, n_splits=5)
+    dl_train_performance, dl_val_performance, dl_report, dl_cm , model = train_test_cross_val(X, y1, n_splits)
     # Print or use the results as needed
     print("Average Training Performance:", np.mean(dl_train_performance))
     print("Average Validation Performance:", np.mean(dl_val_performance))
@@ -84,7 +84,7 @@ def trainDL_model(f_name):
 
     #################################################################
 
-    dl_train_performance, dl_val_performance, dl_report, dl_cm , model = train_test_cross_val(X, y2, n_splits=5)
+    dl_train_performance, dl_val_performance, dl_report, dl_cm , model = train_test_cross_val(X, y2, n_splits)
     # Print or use the results as needed
     print("Average Training Performance:", np.mean(dl_train_performance))
     print("Average Validation Performance:", np.mean(dl_val_performance))
