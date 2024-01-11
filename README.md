@@ -114,8 +114,8 @@ Step.3:
 Let's merge.
 
 ```bash
-cat *.csv > x_data.csv
-cat y_data > y_data.csv
+  nawk 'FNR==1 && NR!=1{next;}{print}' *.csv > x_data.csv
+  nawk 'FNR==1 && NR!=1{next;}{print}' y_data > y_data.csv
 ```
 Always remember that the X file is the Di and Tri frequency signal and the Y file is the MetaData
 
