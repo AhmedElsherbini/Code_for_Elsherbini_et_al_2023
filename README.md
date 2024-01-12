@@ -119,7 +119,6 @@ Let's merge.
 ```
 Always remember that the X file is the Di and Tri frequency signal and the Y file is the MetaData
 
-So, I made a small script that can separate them either fix this problem or make a small dataset mini_x and mini_y
 
 **How did we prepare our Machine Learning models?**
 
