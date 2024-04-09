@@ -55,7 +55,7 @@ for file in *.fa ; do cat $file | grep ">" | wc -l >> count.txt ; done
 
 Regardless of this work, this step can be used to produce Di and Tri nucleotide signals in just two steps.
 
-Important: GenoSig is a variant of [PaSiT](https://academic.oup.com/bioinformatics/article/36/8/2337/5695704) and both of them are developed by [Gleb Goussarav](https://github.com/GlebGoussarov).
+Important: GenoSig is a variant of [PaSiT](https://academic.oup.com/bioinformatics/article/36/8/2337/5695704)(aka [GenDisCAl](https://github.com/LM-UGent/GenDisCal)) and both of them are developed by [Gleb Goussarav](https://github.com/GlebGoussarov).
 
 Just in a normal PC (24 GB RAM and Intel core i5-8265U CPU @ 1.60GHz), it took ~7 minutes (wall-clock time) for a dataset of ~37.8 GB).
 
