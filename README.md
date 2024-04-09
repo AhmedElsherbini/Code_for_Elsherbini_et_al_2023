@@ -83,7 +83,9 @@ Back again to the SARS-CoV2 project...
 
 This is a crucial step. Well, the MetaData in our work is two information the clade and the continent. The clade was concluded from the name of the Fasta file, while the continent needed a lot work.
 
-How did we get the continent? From the header of the fasta file (>SARS-COV-3356667-EGYPT-....) you can find the country. right? So, using a Python script we looped over each header in all of the files and based on a country-continent association (aka guide.csv) file, we were able to conclude for each sequence which continent it belong.
+How did we get the continent? 
+
+From the header of the fasta file (>SARS-COV-3356667-EGYPT-....) you can find the country. right? So, using a Python script we looped over each header in all of the files and based on a country-continent association (aka guide.csv) file, we were able to conclude for each sequence which continent it belong.
 
 These steps explain in detail this process.
 
