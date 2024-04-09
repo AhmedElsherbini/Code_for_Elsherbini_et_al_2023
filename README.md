@@ -91,7 +91,7 @@ These steps explain in detail this process.
 
 Step.1:
 
-This command extracts the first column to make a FAKE file with Fasta extension which can be used to extract metadata (aka y data in our next section related to Machine learning) I mean
+This command extracts the first column to make a FAKE file with ".fasta" extension which can be used to extract metadata (aka y data in our next section related to Machine learning) I mean
 make sure that the column ID starts with >xxxxxxx in both files. this command to add > at the start of the names
 
 ```bash
