@@ -1,6 +1,5 @@
-#Utilizing genomic signatures to gain insights into the dynamics of SARS-CoV-2 through Machine and Deep Learning techniques
+# Utilizing genomic signatures to gain insights into the dynamics of SARS-CoV-2 through Machine and Deep Learning techniques
 
-## 
 
 **Kindly if you find this repo useful for your work, cite [this publication](https://bmcbioinformatics.biomedcentral.com/articles/10.1186/s12859-024-05648-2?fbclid=IwAR34j_Yc_FflBEDyIEm1_M7Fc0NYUXLZWEZy6LSTpxsEAFf_5LtQ2rtc35U_aem_AU93zi0adwIVejAHnYwr9RCllqpVx_MRCwNlcSGdkMtX1RXOqWMDDxlBLLgHdX_NeXZg_0JhKtkMgE15zR77OzqS)** **and star the repo itself** 
 
